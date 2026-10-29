@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>antowaan</title>
+  <meta name="description" content="Antoine Rosselli (antowaan), programmeur et scénariste de jeux vidéo : jeux indépendants, crédits en studio, outils et collectif Of Passage.">
+  <meta name="theme-color" content="#121624">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Antoine Rosselli (antowaan)">
+  <meta property="og:description" content="Programmeur et scénariste de jeux vidéo : jeux indépendants, crédits chez Microids et Quantic Dream, outils et collectif Of Passage.">
+  <!-- Une fois le site en ligne, remplace par l'adresse complète : https://ton-site/img/og.png -->
+  <meta property="og:image" content="img/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23121624'/%3E%3Cpath d='M3 5h10v2h-2v2H9v2H7V9H5V7H3z' fill='%23f2d478'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Public+Sans:wght@400;500;600&family=VT323&family=EB+Garamond:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Les textes marqués data-i18n sont traduits par script.js (dictionnaire TEXTS) -->
+  <a class="skip-link" href="#projets" data-i18n="skip">Aller au contenu</a>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="#top" class="nav-logo" translate="no">antowaan</a>
+      <nav aria-label="Navigation principale" data-i18n-aria="navLabel">
+        <a href="#projets" data-i18n="navGames">Jeux</a>
+        <a href="#credits" data-i18n="navCredits">Crédits</a>
+        <a href="#outils" data-i18n="navTools">Outils</a>
+        <a href="#of-passage" translate="no">Of Passage</a>
+        <a href="#a-venir" data-i18n="navNext">À venir</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+        <div class="lang" role="group" aria-label="Langue" data-i18n-aria="langLabel">
+          <button type="button" class="lang-btn" data-lang="fr" aria-pressed="true">FR</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ===== INTRO : une boîte de dialogue de jeu ===== -->
+    <section class="hero wrap">
+      <h1>Antoine <span>Rosselli</span></h1>
+
+      <!-- Sous le nom : classe et compétences à gauche, stats à droite -->
+      <div class="hero-info">
+        <div class="hero-id">
+          <!-- Rôles, du principal au secondaire -->
+          <div class="roles">
+            <p class="role-main"><span class="role-label" data-i18n="roleClass">Classe</span> <span data-i18n="roleMain">Programmeur</span></p>
+            <ul class="role-sub" aria-label="Autres rôles" data-i18n-aria="rolesOther">
+              <li data-i18n="roleWriter">Scénariste</li>
+              <li>QA</li>
+              <li>Dev tools</li>
+              <li>Game designer</li>
+            </ul>
+          </div>
+
+          <!-- Compétences techniques -->
+          <dl class="skills">
+            <div class="skill-row">
+              <dt data-i18n="skillEngines">Moteurs</dt>
+              <dd>
+                <ul>
+                  <li>Godot</li>
+                  <li>Unity</li>
+                  <li>GameMaker</li>
+                  <li class="skill-extra" data-i18n="skillInHouse">et moteurs internes</li>
+                </ul>
+              </dd>
+            </div>
+            <div class="skill-row">
+              <dt data-i18n="skillLanguages">Langages</dt>
+              <dd>
+                <ul>
+                  <li>GDScript</li>
+                  <li>C#</li>
+                  <li>GML</li>
+                  <li>Python</li>
+                  <li>C++</li>
+                  <li>JavaScript</li>
+                </ul>
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- Les chiffres se calculent dans script.js à partir des listes de jeux -->
+        <div class="stats">
+          <a class="stat" href="#projets">
+            <span class="stat-label" data-i18n="statIndie">Jeux créés en indé</span>
+            <strong class="stat-value" id="stat-indie">9</strong>
+          </a>
+          <a class="stat" href="#credits">
+            <span class="stat-label" data-i18n="statTotal">Jeux sur lesquels j'ai travaillé</span>
+            <strong class="stat-value" id="stat-total">18</strong>
+          </a>
+        </div>
+      </div>
+
+      <div class="dialog" role="group" aria-label="Présentation" data-i18n-aria="introLabel">
+        <p class="dialog-name" translate="no">antowaan</p>
+        <p class="dialog-text" data-i18n="intro">
+          Salut, moi c'est Antoine. Programmeur avant tout, j'écris aussi les histoires
+          de mes jeux : étranges, parfois drôles, toujours portées par leur ambiance.
+          Je publie mes jeux depuis 2023, et le prochain est en route.
+        </p>
+        <span class="dialog-next" aria-hidden="true">▼</span>
+      </div>
+
+      <ul class="menu">
+        <li><a href="#projets" data-i18n="menuGames">Voir mes jeux</a></li>
+        <li><a href="#a-venir" data-i18n="menuNext">Le prochain projet</a></li>
+        <li><a href="https://antowaan.itch.io/" target="_blank" rel="noopener" data-i18n="menuItch">Ma page itch.io ↗</a></li>
+        <li><a href="https://www.linkedin.com/in/antoine-rosselli-46555b303/" target="_blank" rel="noopener" data-i18n="menuLinkedin">Mon LinkedIn ↗</a></li>
+      </ul>
+    </section>
+
+    <!-- ===== JEUX, rangés par année ===== -->
+    <section id="projets" class="section wrap">
+      <div class="section-head">
+        <h2 data-i18n="gamesTitle">Ce que j'ai fait</h2>
+        <div class="filters" role="group" aria-label="Filtrer les jeux" data-i18n-aria="filtersLabel">
+          <button class="filter is-active" data-filter="all" aria-pressed="true" data-i18n="filterAll">Tous</button>
+          <button class="filter" data-filter="narration" aria-pressed="false" data-i18n="filterNarrative">Narration</button>
+          <button class="filter" data-filter="arcade" aria-pressed="false" data-i18n="filterArcade">Arcade &amp; action</button>
+        </div>
+      </div>
+      <div id="timeline" class="timeline"></div>
+    </section>
+
+    <!-- ===== CRÉDITS : jeux auxquels j'ai participé ===== -->
+    <section id="credits" class="section wrap">
+      <div class="section-head">
+        <h2 data-i18n="creditsTitle">Dans les crédits</h2>
+        <p class="lead credits-lead" data-i18n="creditsLead">Les jeux de studios sur lesquels j'ai travaillé.</p>
+      </div>
+      <!-- La liste se remplit depuis script.js (credits) -->
+      <ol class="credits" id="credits-list"></ol>
+    </section>
+
+    <!-- ===== CODE & OUTILS ===== -->
+    <section id="outils" class="section wrap">
+      <div class="section-head">
+        <h2 data-i18n="toolsTitle">Code &amp; outils</h2>
+        <p class="lead credits-lead" data-i18n="toolsLead">Ce que je programme à côté des jeux : des outils pour les équipes, et des projets pour apprendre.</p>
+      </div>
+      <!-- La liste se remplit depuis script.js (tools) -->
+      <div class="tools" id="tools-list"></div>
+    </section>
+
+    <!-- ===== OF PASSAGE ===== -->
+    <section id="of-passage" class="op">
+      <div class="wrap op-inner">
+        <div class="op-intro">
+          <p class="op-eyebrow" data-i18n="opEyebrow">Le collectif</p>
+          <!-- Logo : enregistre l'image sous img/of-passage.png. Sans fichier, le titre texte s'affiche. -->
+          <h2 class="op-title" translate="no">
+            <img src="img/of-passage.png" alt="Of Passage" class="op-logo" id="op-logo">
+            <span class="op-title-text" id="op-title-text" hidden>Of Passage</span>
+          </h2>
+          <!-- À compléter : le nom de ton ami cofondateur -->
+          <p class="lead" data-i18n="opLead">
+            Un collectif de jeux vidéo indépendants que j'ai fondé avec un ami. Ici, personne ne décide seul : à chaque étape de la création, chaque membre donne son avis, et chaque avis compte.
+          </p>
+          <div class="op-actions">
+            <button type="button" class="btn-join" id="op-join-open" data-i18n="opJoin">Demander à rejoindre</button>
+            <!-- Lien vers le site du collectif. Une fois en ligne, remplace par son adresse complète (https://...) -->
+            <a class="btn-site" href="../site%20of%20passage/index.html" data-i18n="opSite">Voir le site du collectif →</a>
+            <!-- Liens du collectif : remplis-les dans script.js (OP_LINKS) -->
+            <ul class="op-links" id="op-links"></ul>
+          </div>
+        </div>
+
+        <div class="op-works">
+          <p class="op-eyebrow" data-i18n="opWorks">Jeux du collectif</p>
+          <ol class="op-list">
+            <li>
+              <span class="op-year">2025</span>
+              <a href="https://antowaan.itch.io/gaslighters" target="_blank" rel="noopener" class="op-game" translate="no">Gaslighters</a>
+              <span class="op-state" data-i18n="opDemo">Démo sur itch.io</span>
+            </li>
+            <li>
+              <span class="op-year" data-i18n="opSoon">Bientôt</span>
+              <a href="#a-venir" class="op-game" translate="no">Veilbound</a>
+              <span class="op-state op-state-live" data-i18n="opInDev">En développement</span>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formulaire pour rejoindre Of Passage -->
+    <dialog class="join" id="op-join" aria-labelledby="join-title">
+      <form class="join-form" id="op-join-form" method="dialog" novalidate>
+        <p class="dialog-name" translate="no">Of Passage</p>
+        <h3 id="join-title" data-i18n="joinTitle">Rejoindre le collectif</h3>
+        <p class="join-help" data-i18n="joinHelp">Présente-toi en quelques lignes. Le bouton prépare un email avec tes réponses, tu n'as plus qu'à l'envoyer.</p>
+
+        <label for="join-name" data-i18n="fieldName">Ton nom ou pseudo</label>
+        <input id="join-name" name="name" type="text" required autocomplete="name">
+
+        <label for="join-role" data-i18n="fieldRole">Ce que tu fais</label>
+        <select id="join-role" name="role" required>
+          <option value="" data-i18n="rolePick">Choisis un rôle</option>
+          <option data-i18n="roleProg">Programmation</option>
+          <option>Game design</option>
+          <option data-i18n="roleWriting">Écriture et narration</option>
+          <option data-i18n="role2d">Art 2D</option>
+          <option data-i18n="role3d">Art 3D</option>
+          <option data-i18n="roleSound">Son et musique</option>
+          <option data-i18n="roleVoice">Doublage</option>
+          <option data-i18n="roleOther">Autre</option>
+        </select>
+
+        <label for="join-link" data-i18n="fieldLink">Un lien vers ton travail <span>(facultatif)</span></label>
+        <input id="join-link" name="link" type="url" placeholder="https://" autocomplete="url" spellcheck="false">
+
+        <label for="join-msg" data-i18n="fieldWhy">Pourquoi Of Passage ?</label>
+        <textarea id="join-msg" name="message" rows="4" required></textarea>
+
+        <p class="join-error" id="join-error" role="alert" hidden></p>
+        <p class="join-done" id="join-done" role="status" hidden></p>
+
+        <div class="join-actions">
+          <button type="button" class="join-cancel" id="op-join-close" data-i18n="cancel">Annuler</button>
+          <button type="submit" class="btn-join" data-i18n="prepareEmail">Préparer l'email</button>
+        </div>
+      </form>
+    </dialog>
+
+    <!-- ===== À VENIR ===== -->
+    <section id="a-venir" class="section wrap">
+      <div class="section-head">
+        <h2 data-i18n="nextTitle">Ce que je fais ensuite</h2>
+      </div>
+
+      <article class="upcoming">
+        <div class="upcoming-art">
+          <img src="img/veilbound.jpg" alt="Logo de Veilbound" loading="lazy" data-i18n-alt="vbAlt">
+        </div>
+        <div class="upcoming-body">
+          <p class="status" data-i18n="vbStatus">En développement · avec Of Passage</p>
+          <h3 translate="no">Veilbound</h3>
+          <!-- À compléter : pitch, genre, date de sortie prévue -->
+          <p data-i18n="vbText">
+            Mon prochain jeu, développé avec Of Passage sous Godot. Toute l'équipe participe aux choix, et des sessions de playtest sont en cours.
+          </p>
+          <ul class="chips">
+            <li>Godot</li>
+            <li>FMOD</li>
+            <li data-i18n="vbChipPlaytest">Playtests en cours</li>
+          </ul>
+          <div class="upcoming-actions">
+            <button type="button" class="btn-play" id="pt-join-open" data-i18n="vbJoin">Rejoindre le playtest</button>
+            <!-- Ouvre la notice sur la page Veilbound du site Of Passage. Une fois en ligne, remplace par l'adresse complète -->
+            <a class="btn-notice" href="../site%20of%20passage/veilbound.html#lire" data-i18n="vbNotice">Lire la notice →</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Formulaire pour rejoindre le playtest de Veilbound -->
+    <dialog class="join join-play" id="pt-join" aria-labelledby="pt-title">
+      <form class="join-form" id="pt-join-form" method="dialog" novalidate>
+        <p class="dialog-name" translate="no">Veilbound</p>
+        <h3 id="pt-title" data-i18n="ptTitle">Rejoindre le playtest</h3>
+        <p class="join-help" data-i18n="ptHelp">Dis-nous qui tu es. Le bouton prépare un email avec tes réponses, tu n'as plus qu'à l'envoyer.</p>
+
+        <label for="pt-name" data-i18n="fieldName">Ton nom ou pseudo</label>
+        <input id="pt-name" name="name" type="text" required autocomplete="name">
+
+        <label for="pt-exp" data-i18n="ptFieldExp">Tu as déjà fait des playtests ?</label>
+        <select id="pt-exp" name="experience" required>
+          <option value="" data-i18n="ptExpPick">Choisis une réponse</option>
+          <option data-i18n="ptExpNever">Jamais, ce sera le premier</option>
+          <option data-i18n="ptExpFew">Quelques fois</option>
+          <option data-i18n="ptExpOften">Souvent</option>
+          <option data-i18n="ptExpPro">Je suis testeur QA</option>
+        </select>
+
+        <label for="pt-games" data-i18n="ptFieldGames">Tes jeux préférés <span>(facultatif)</span></label>
+        <input id="pt-games" name="games" type="text" autocomplete="off">
+
+        <label for="pt-msg" data-i18n="ptFieldMsg">Un mot pour nous ? <span>(facultatif)</span></label>
+        <textarea id="pt-msg" name="message" rows="3"></textarea>
+
+        <p class="join-error" id="pt-error" role="alert" hidden></p>
+        <p class="join-done" id="pt-done" role="status" hidden></p>
+
+        <div class="join-actions">
+          <button type="button" class="join-cancel" id="pt-join-close" data-i18n="cancel">Annuler</button>
+          <button type="submit" class="btn-play" data-i18n="prepareEmail">Préparer l'email</button>
+        </div>
+      </form>
+    </dialog>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section wrap contact">
+      <h2 data-i18n="contactTitle">Parlons-en.</h2>
+      <p class="lead" data-i18n="contactLead">Une collaboration, un projet, ou juste envie de dire bonjour ?</p>
+      <ul class="menu">
+        <li><a href="https://antowaan.itch.io/" target="_blank" rel="noopener">antowaan.itch.io ↗</a></li>
+        <li><a href="https://www.linkedin.com/in/antoine-rosselli-46555b303/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+        <!-- Ajoute tes autres liens ici, par exemple :
+        <li><a href="mailto:ton@email.com">ton@email.com</a></li>
+        -->
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer wrap">
+    <span>© <span id="year">2026</span> Antoine Rosselli</span>
+    <span class="pixel" translate="no">antowaan</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
