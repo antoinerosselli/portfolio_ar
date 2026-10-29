@@ -385,7 +385,7 @@ const tools = [
     },
     stack: { fr: ["JavaScript", "pdf.js"], en: ["JavaScript", "pdf.js"] },
     // Une fois en ligne, remplace par l'adresse complète de la page Veilbound
-    links: [{ label: { fr: "Lire la notice", en: "Read the manual" }, url: "../site%20of%20passage/veilbound.html#lire" }],
+    links: [{ label: { fr: "Lire la notice", en: "Read the manual" }, url: "https://ofpassagecollective.vercel.app/veilbound.html#notice" }],
   },
 ];
 
