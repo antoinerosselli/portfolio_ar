@@ -40,6 +40,7 @@ const TEXTS = {
     filterNarrative: "Narration",
     filterArcade: "Arcade &amp; action",
     playOnItch: "Jouer sur itch.io ↗",
+    playOnSteam: "Voir sur Steam ↗",
     with: "avec",
     creditsTitle: "Dans les crédits",
     creditsLead: "Les jeux de studios sur lesquels j’ai travaillé.",
@@ -50,7 +51,7 @@ const TEXTS = {
     opJoin: "Demander à rejoindre",
     opSite: "Voir le site du collectif →",
     opWorks: "Jeux du collectif",
-    opDemo: "Démo sur itch.io",
+    opSteam: "Sur Steam",
     opSoon: "Bientôt",
     opInDev: "En développement",
     joinTitle: "Rejoindre le collectif",
@@ -130,6 +131,7 @@ const TEXTS = {
     filterNarrative: "Narrative",
     filterArcade: "Arcade &amp; action",
     playOnItch: "Play on itch.io ↗",
+    playOnSteam: "View on Steam ↗",
     with: "with",
     creditsTitle: "In the credits",
     creditsLead: "Studio games I’ve worked on.",
@@ -140,7 +142,7 @@ const TEXTS = {
     opJoin: "Ask to join",
     opSite: "Visit the collective’s site →",
     opWorks: "Games from the collective",
-    opDemo: "Demo on itch.io",
+    opSteam: "On Steam",
     opSoon: "Soon",
     opInDev: "In development",
     joinTitle: "Join the collective",
@@ -220,11 +222,12 @@ const projects = [
       en: "A mysterious fog has fallen over Rock Valley. Strangers speak half-truths over the radio.",
     },
     genre: { fr: "Mystère", en: "Mystery" },
-    platform: { fr: "Windows · Démo", en: "Windows · Demo" },
+    platform: { fr: "Windows", en: "Windows" },
     studio: "Of Passage",
     tags: ["narration"],
     img: "img/cover-gaslighters.png",
-    url: "https://antowaan.itch.io/gaslighters",
+    url: "https://store.steampowered.com/app/3628610/Gaslighters/",
+    cta: "playOnSteam",
     tech: "Godot · GDScript",
     featured: true,
   },
@@ -446,7 +449,7 @@ function gameHTML(p) {
         <h3 translate="no"><a href="${p.url}" target="_blank" rel="noopener">${p.title}</a></h3>
         <p>${p.pitch[lang]}</p>
         ${p.tech ? `<p class="game-tech">${p.tech}</p>` : ""}
-        <a class="game-link" href="${p.url}" target="_blank" rel="noopener">${t("playOnItch")}</a>
+        <a class="game-link" href="${p.url}" target="_blank" rel="noopener">${t(p.cta || "playOnItch")}</a>
       </div>
     </article>`;
 }
